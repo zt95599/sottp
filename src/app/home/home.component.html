@@ -1,0 +1,69 @@
+
+<div style="padding-bottom: 60px">
+  <NoticeBar [option]="{'content': '公告:感谢所有客户对译美云产品的支持,有您的支持我们会做得更好!!!', 'font': '14px'}"></NoticeBar>
+
+  <div style="height: auto">
+    <Carousel [infinite]="true"
+              [vertical]="false"
+              [selectedIndex]="0"
+              [autoplayInterval]="5000"
+              [autoplay]="true"
+    >
+      <CarouselSlide *ngFor="let item of state.data">
+        <div style="display: inline-block; width: 100%;" (click)="showProductGroup('https')">
+          <img src="https://zos.alipayobjects.com/rmsportal/{{item}}.png" style=" pointer-events: none; width: 50%;"/>
+        </div>
+      </CarouselSlide>
+    </Carousel>
+  </div>
+
+  <div>
+    <Tabs [page]="5" (onTabClick)="productTypeList($event)">
+      <TabPane [title]="groupType">
+        <ng-template #groupType>
+          <div>精选</div>
+        </ng-template>
+        <div class="mod home">
+          <ul class="mod list-item-wrap">
+            <li (click)="clickUrlA(list)"    class="mod list-item" *ngFor="let list of listShop">
+              <div class="list-item-icon"><img src="{{list.icon}}" alt="{{list.name}}"></div>
+              <div class="titleDesc"><span>{{list.titleDesc|textChar}}</span></div>
+              <div class="shopMoney">
+                <div style="width: 50%;float: left;font-weight: 600">￥ <span>{{list.money}}</span></div>
+                <div style="width: 50%;float: left;padding: 0px 15px;"><span style="color: #FFFFFF;display: block;border-radius: 15px;background-color:orangered;text-align: center;font-style: 12px;">去抢购</span></div>
+              </div>
+              <div class="shopDesc">已售<span>{{list.markCnt}}</span>件</div>
+            </li>
+          </ul>
+        </div>
+      </TabPane>
+      <TabPane [title]="groupType1">
+        <ng-template #groupType1>
+          <div>食品</div>
+        </ng-template>
+        <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
+          Content of 7th tab
+        </div>
+      </TabPane>
+      <TabPane [title]="groupType2">
+        <ng-template #groupType2>
+          <div>美妆</div>
+        </ng-template>
+
+      </TabPane>
+      <TabPane [title]="groupType3">
+        <ng-template #groupType3>
+          <div>日用</div>
+        </ng-template>
+
+      </TabPane>
+      <TabPane [title]="groupType4">
+        <ng-template #groupType4>
+          <div>服装</div>
+        </ng-template>
+
+      </TabPane>
+    </Tabs>
+  </div>
+</div>
+

@@ -1,0 +1,45 @@
+<div>
+  <WingBlank>
+    <Carousel [infinite]="true"
+              [vertical]="false"
+              [selectedIndex]="1"
+    >
+      <CarouselSlide *ngFor="let item of state.data">
+        <div style="display: inline-block; width: 100%;" [ngStyle]="{'height': state.imgHeight}">
+          <img src="https://zos.alipayobjects.com/rmsportal/{{item}}.png" style=" pointer-events: none; width: 100%;"/>
+        </div>
+      </CarouselSlide>
+    </Carousel>
+  </WingBlank>
+</div>
+<div style="padding: 10px">
+  <div>
+    <p>我是一个产品我很优质,阿斯蒂芬无二额鹅鹅鹅二维</p>
+  </div>
+  <div>
+    <p><span style="color:grey;">备注:我是描述游泳了空间链接而我认为犹太人突然国际华城几号发发货高房价估计会工服费黑寡妇巨化股份</span></p>
+  </div>
+ <div style="display: -webkit-box;">
+   <p style="color: red; width: 70%"><span>￥</span><span style="font-size: 20px;">149.00</span></p>
+   <p style="width: 30%; text-align: right;padding-top: 5px"><span>快递方式:包邮</span></p>
+ </div>
+
+
+</div>
+<div style="height: 8px; background:#bbbbbb5c"></div>
+<div>
+  <div>
+    <List>
+      <ListItem [extra]="stepperDisabled"  [ngStyle]="abc">已选数量:{{shopDescNumber}} 件</ListItem>
+    </List>
+    <ng-template #stepperDisabled>
+      <Stepper  [ngModel]="shopNumber"  (onChange)="change($event)"  [min]="1" [max]="100" [showNumber]="true" [showNumber]="true"></Stepper>
+    </ng-template>
+  </div>
+</div>
+<div style="height: 8px; background:#bbbbbb5c"></div>
+<div>
+  <List [className]="'my-list'" [renderHeader]=(renderHeader)>
+    <ListItem [extra]="'extra content'" [arrow]="'horizontal'" (onClick)="onClick()">Title</ListItem>
+  </List>
+</div>

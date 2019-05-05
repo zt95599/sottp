@@ -1,0 +1,131 @@
+
+  <div class="userinfo_backage">
+    <div class="mod">
+      <ul id="message-list" class="mod list-wrap" style="padding: 15px">
+        <li  (click)="navPath('user-info')" class="mod list-item" style="border: none; height: auto;display: -webkit-inline-box;width: 100%">
+          <div class="fl list-item-icon"><img  src="{{icon}}" style="border-radius: 50%;"></div>
+          <div class="fl list-item-info" style="font-size: 1.4em;color: #FFFFFF;" *ngIf="islogshow">
+            <p>用户/注册</p>
+          </div>
+          <div class="fl list-item-info" *ngIf="!islogshow" style="padding: 12px">
+            <div  class="mod list-item-name"><span style="color: #FFFFFF;font-size: 16px;">{{name}}</span></div>
+            <div class="mod list-item-desc">
+              <p style="color: #FFFFFF;font-size: 12px">ID:{{usercode}}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="mod">
+        <ul  class="mod list-wrap user-total" style="padding-top: 5px;">
+          <li (click)="navPath('user-integer')" class="fl list-item"  style="width: 25%;">
+            <div>
+              <div class="mod list-item-wrap">
+                <div class="mod list-item-icon" style="min-height: auto; padding-bottom: 5px;">0</div>
+                <div class="mod list-item-name">译豆</div>
+              </div>
+            </div>
+          </li>
+          <li (click)="navPath('user-coupon')"  class="fl list-item"  style="width: 25%;">
+            <div>
+              <div class="mod list-item-wrap">
+                <div class="mod list-item-icon" style="min-height: auto; padding-bottom: 5px;">0</div>
+                <div class="mod list-item-name">优惠卷</div>
+              </div>
+            </div>
+          </li>
+          <li (click)="navPath('user-wallet')" class="fl list-item"  style="width: 25%;">
+            <div>
+              <div class="mod list-item-wrap">
+                <div class="mod list-item-icon" style="min-height: auto; padding-bottom: 5px;">0</div>
+                <div class="mod list-item-name">红包</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="mod" style="padding: 10px">
+      <div style="font-weight: 600;padding-bottom: 10px"><span>我的活动</span></div>
+      <ul  class="mod list-wrap" style="padding: 5px;display: -webkit-box;text-align: center">
+        <li  (click)="navPath('user-group')"  class="fl list-item"    style="width: 25%;">
+          <div>
+            <div class="mod list-item-wrap">
+              <div class="mod list-item-icon" style="padding-bottom: 5px"><img  src="{{icon}}" style="width: 40px;height: 40px;"></div>
+              <div class="mod list-item-name">我的拼团</div>
+            </div>
+          </div>
+        </li>
+        <li (click)="navPath('user-wallet')" class="fl list-item"    style="width: 25%;">
+          <div>
+            <div class="mod list-item-wrap">
+              <div class="mod list-item-icon" style="padding-bottom: 5px"><img  src="{{icon}}" style="width: 40px;height: 40px;"></div>
+              <div class="mod list-item-name">我的红包</div>
+            </div>
+          </div>
+        </li>
+        <li class="fl list-item" (click)="navPath('user-gargain')"     style="width: 25%;">
+          <div>
+            <div class="mod list-item-wrap">
+              <div class="mod list-item-icon" style="padding-bottom: 5px"><img  src="{{icon}}" style="width: 40px;height: 40px;"></div>
+              <div class="mod list-item-name">我的砍价</div>
+            </div>
+          </div>
+        </li>
+        <li class="fl list-item"  (click)="navPath('user-zc')"    style="width: 25%;">
+          <div>
+            <div class="mod list-item-wrap">
+              <div class="mod list-item-icon" style="padding-bottom: 5px"><img  src="{{icon}}" style="width: 40px;height: 40px;"></div>
+              <div class="mod list-item-name">我的众筹</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+  <div class="mod" style="padding: 10px">
+    <div style="font-weight: 600;padding-bottom: 10px"><span>我的订单</span></div>
+    <ul id="work-repair-nav-list" class="mod list-wrap" style="padding: 5px;display: -webkit-box;text-align: center">
+      <li class="fl list-item" (click)="navPath('user-pay-order')"     style="width: 25%;">
+        <div>
+          <div class="mod list-item-wrap">
+            <div class="mod list-item-icon" style="padding-bottom: 5px"><img  src="{{icon}}" style="width: 40px;height: 40px;"></div>
+            <div class="mod list-item-name">待付款</div>
+          </div>
+        </div>
+      </li>
+      <li class="fl list-item" (click)="navPath('user-pay-order')"    style="width: 25%;">
+        <div>
+          <div class="mod list-item-wrap">
+            <div class="mod list-item-icon" style="padding-bottom: 5px"><img  src="{{icon}}" style="width: 40px;height: 40px;"></div>
+            <div class="mod list-item-name">待收货</div>
+          </div>
+        </div>
+      </li>
+      <li class="fl list-item"  (click)="navPath('user-pay-order')"    style="width: 25%;">
+        <div>
+          <div class="mod list-item-wrap">
+            <div class="mod list-item-icon" style="padding-bottom: 5px"><img  src="{{icon}}" style="width: 40px;height: 40px;"></div>
+            <div class="mod list-item-name">已完成</div>
+          </div>
+        </div>
+      </li>
+      <li class="fl list-item" (click)="navPath('user-pay-order')"     style="width: 25%;">
+        <div>
+          <div class="mod list-item-wrap">
+            <div class="mod list-item-icon" style="padding-bottom: 5px"><img  src="{{icon}}" style="width: 40px;height: 40px;"></div>
+            <div class="mod list-item-name">全部</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+

@@ -1,0 +1,24 @@
+
+.shop_card{
+  margin-top: 10px;
+}
+.shop_card_list{
+  width: 50%;
+}
+
+.shop_card_list img{
+  width: 100%;
+}
+
+
+.home{padding-top: 8px;}
+.home .list-item{width: 50%;display: inline-block;padding-bottom: 10px}
+.home .list-item:nth-child(3n-1){ border-left:1px solid #eee; }
+.home .list-item img{ max-width:100%; width: 100%; margin: auto;}
+.home .list-item a{ color: #888; text-decoration: none;}
+.home .list-item-wrap{ width: 100%; height: 100%;}
+.home .titleDesc{text-align: left; width: 100%;padding: 5px}
+.home .shopMoney{text-align: left;color: red;padding:0px 5px;}
+.home .shopDesc{text-align: left;color:#888888;padding:0px 5px;font-size: 9px}
+
+
